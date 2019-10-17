@@ -1,5 +1,5 @@
 -#  This file is app/views/movies/index.html.haml
-%h1 All Movies
+%h1 Inventory Items
 
 = form_tag movies_path, :id => "ratings_form", :method => :get do
   Include:
@@ -8,22 +8,18 @@
     = check_box_tag "ratings[#{rating}]", nil, checked
   = submit_tag 'Refresh', :id => "ratings_submit"
 
-%table#movies
+%table#inventory
   %thead
     %tr
-      %th{:class => ("hilite" if @sort == 'title')}
-        =link_to "Movie Title", movies_path(:sort => :title), :id => "title_header"
-      %th Rating
-      %th{:class => ("hilite" if @sort == 'release_date')}
-        =link_to "Release Date", movies_path(:sort => :release_date), :id => "release_date_header"
-      %th More Info
+      %th{:class => ("hilite" if @sort == 'item')}
+        =link_to "Item", inventory_path(:sort => :item), :id => "item_header:
+      %th CheckedOut
+      %th Total
+      %th Remaining
   %tbody
-    - @movies.each do |movie|
+    - @inventory.each do |inventory|
       %tr
-        %td= movie.title
-        %td= movie.rating
-        %td= movie.release_date
-        %td= link_to "More about #{movie.title}", movie_path(movie)
-
-= link_to 'Add new movie', new_movie_path
-
+        %td= inventory.item
+        %td= inventory.checked_out
+        %td= inventory.total
+        %td = (inventory.total - inventory.checked_out)

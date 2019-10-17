@@ -12,7 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20150809022253) do
-
+  /
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.string   "rating"
@@ -21,5 +21,11 @@ ActiveRecord::Schema.define(version: 20150809022253) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
+  /
+  create_table "inventory", force: :cascade do |t|
+    t.string "item"
+    t.integer "checked_out"
+    t.integer "total"
+    t.integer "remaining"
+    t.datetime "updated_at"
 end
