@@ -33,18 +33,18 @@ h1.title {
   font-size: 2em;
   font-style: normal;
 }
-table#items {
+table#inventory {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#items th {
+table#inventory th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#items th, table#items td {
+table#inventory th, table#inventory td {
   padding: 4px;
   text-align: left;
 }
@@ -60,7 +60,7 @@ form label {
   color: maroon;
 }
 /*Highlights columns that are sorted*/
-table#items th.hilite {
+table#inventory th.hilite {
   background-color: yellow;
 }
 
