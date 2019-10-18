@@ -61,7 +61,7 @@ table#inventory th, table#inventory td {
   padding: 4px;
   text-align: left;
 }
-table#inventory tr {
+table#inventory td {
   border-right: 2px solid;
 }
 #notice #warning {
