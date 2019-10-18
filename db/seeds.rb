@@ -18,9 +18,9 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
   	 ]
 
-inventory = [{:title => 'Hulls', :description => 'none', :checked_out => 1, :quantity => 1},
-					{:title => 'LifeJackets', :description => 'none', :checked_out => 20, :quantity => 40},
-					{:title => 'Oars', :description => 'none', :checked_out => 3, :quantity => 6},
+inventory = [{:item => 'Hulls', :description => 'none', :quantity => 1},
+					{:item => 'LifeJackets', :description => 'none', :quantity => 40},
+					{:item => 'Oars', :description => 'none', :quantity => 6},
      ]
 
 movies.each do |movie|
