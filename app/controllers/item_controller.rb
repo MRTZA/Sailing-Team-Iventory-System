@@ -16,7 +16,7 @@ class ItemController < ApplicationController
     @checked_options = params[:options] || session[:options] ||
       Hash[ItemHelper.all_options.map {|k| [k, true]}]
     #ALL ratings
-    @all_ratings = Hash[ItemHelper.all_options.map {|k| [k, @checked_options.key?(k)]}]
+    @all_options = Hash[ItemHelper.all_options.map {|k| [k, @checked_options.key?(k)]}]
     # Remembers the session - did this in Part 2. Didn't realize this would be
     # part of Part 3 when I looked into doing the checkboxes and updating the list based on them.
     # So I had already used [session] for the sort and ratings.
