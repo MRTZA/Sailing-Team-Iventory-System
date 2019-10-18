@@ -8,7 +8,7 @@ html, body {
   width: 100%;
 }
 .bg-primary {
-  background-color: Darkslategray!important;
+  background-color: maroon!important;
 }
 container {
   width: 100%;
@@ -30,6 +30,7 @@ h1 {
   display: block;
   width: 100%;
   border-bottom: 1px solid DarkSlateGrey;
+  border-radius: 5px;
 }
 h1.title {
   margin: 0 0 1em;
@@ -37,6 +38,7 @@ h1.title {
   background-color: maroon;
   color: white;
   border-bottom: 4px solid slategray;
+  border-radius: 5px;
   font-size: 2em;
   font-style: normal;
 }
@@ -47,10 +49,12 @@ table#inventory {
   border-bottom: 2px solid slategray;
   border-right: 2px solid slategray;
   border-left: 2px solid slategray;
+  border-radius: 5px;
   font-family: 'Open Sans';
 }
 table#inventory th {
   border: 2px solid maroon;
+  border-radius: 5px;
   font-weight: bold;
   background-color: slategray;
   color: white;
