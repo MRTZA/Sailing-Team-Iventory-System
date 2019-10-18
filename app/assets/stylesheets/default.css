@@ -29,16 +29,16 @@ h1 {
   font-style: italic;
   display: block;
   width: 100%;
-  border-bottom: 1px solid DarkSlateGrey;
   border-radius: 5px;
+  border-bottom: 1px solid DarkSlateGrey;
 }
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
   background-color: maroon;
   color: white;
-  border-bottom: 4px solid slategray;
   border-radius: 5px;
+  border-bottom: 4px solid slategray;
   font-size: 2em;
   font-style: normal;
 }
@@ -46,15 +46,15 @@ table#inventory {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
+  border-radius: 5px;
   border-bottom: 2px solid slategray;
   border-right: 2px solid slategray;
   border-left: 2px solid slategray;
-  border-radius: 5px;
   font-family: 'Open Sans';
 }
 table#inventory th {
-  border: 2px solid #50000;
   border-radius: 5px;
+  border: 2px solid #500000;
   font-weight: bold;
   background-color: slategray;
   color: white;
@@ -72,11 +72,11 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: #50000;
+  color: #500000;
 }
 /*Highlights columns that are sorted*/
 table#inventory th.hilite {
-  background-color: #50000;
+  background-color: #500000;
   color: white;
 }
 
