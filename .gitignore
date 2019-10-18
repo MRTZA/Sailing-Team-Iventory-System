@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 log
+
+# Ignore other random files
+.idea/

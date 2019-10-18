@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20150809022253) do
 
+  create_table "items", force: :cascade do |t|
+    t.string   "item"
+    t.text     "description"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.string   "rating"
