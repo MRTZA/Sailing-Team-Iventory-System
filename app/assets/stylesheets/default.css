@@ -8,7 +8,7 @@ html, body {
   width: 100%;
 }
 .bg-primary {
-  background-color: Darkslategray;
+  background-color: Darkslategray!important;
 }
 container {
   width: 100%;
@@ -53,6 +53,7 @@ table#inventory th {
   border: 2px solid maroon;
   font-weight: bold;
   background-color: slategray;
+  color: white;
 }
 table#inventory th, table#inventory td {
   padding: 4px;
