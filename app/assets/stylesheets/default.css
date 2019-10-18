@@ -71,3 +71,7 @@ table#inventory th.hilite {
   color: white;
 }
 
+@media (min-width: 720px)
+{
+  max-width: unset;
+}
