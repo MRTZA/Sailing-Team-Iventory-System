@@ -12,7 +12,7 @@ div#main {
 }
 a {
   background: transparent;
-  color: maroon;
+  color: white;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -27,9 +27,9 @@ h1 {
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: orange;
+  background-color: maroon;
   color: white;
-  border-bottom: 4px solid gold;
+  border-bottom: 4px solid slategray;
   font-size: 2em;
   font-style: normal;
 }
@@ -37,12 +37,14 @@ table#inventory {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid slategray;
+  border-right: 2px solid slategray;
+  font-family: 'Open Sans';
 }
 table#inventory th {
-  border: 2px solid white;
+  border: 2px solid maroon;
   font-weight: bold;
-  background-color: wheat;
+  background-color: slategray;
 }
 table#inventory th, table#inventory td {
   padding: 4px;
@@ -61,6 +63,7 @@ form label {
 }
 /*Highlights columns that are sorted*/
 table#inventory th.hilite {
-  background-color: yellow;
+  background-color: maroon;
+  color: white;
 }
 
