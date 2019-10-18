@@ -4,12 +4,10 @@
 %table#inventory
   %thead
     %tr
-      %th{:class => ("hilite" if @sort == 'title')}
-        =link_to "Item Name", item_path(:sort => :title), :id => "title_header"
+      %th Item Name
       %th Description
       %th Checked Out
-      %th{:class => ("hilite" if @sort == 'quantity')}
-        =link_to "Total Quantity", item_path(:sort => :quantity), :id => "quantity_header"
+      %th Total Quantity
       %th Remaining
   %tbody
     - @item.each do |item|
