@@ -13,10 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20150809022253) do
 
-  create_table "items", force: :cascade do |t|
-    t.string   "item"
+  create_table "item", force: :cascade do |t|
+    t.string   "title"
     t.text     "description"
+    t.integer  "checked_out"
     t.integer  "quantity"
+    t.integer  "remaining"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
