@@ -21,7 +21,7 @@ class ItemController < ApplicationController
     # part of Part 3 when I looked into doing the checkboxes and updating the list based on them.
     # So I had already used [session] for the sort and ratings.
     session[:sort] = @sort
-    session[:ratings] = @checked_options
+    session[:options] = @checked_options
     if !params[:sort] && !params[:options]
       flash.keep
       redirect_to item_path(:options => @checked_options, :sort => @sort) and return
