@@ -63,6 +63,7 @@ table#inventory th, table#inventory td {
 }
 table#inventory td {
   border-bottom: 2px solid;
+  text-align: center;
 }
 #notice #warning {
   background: rosybrown;
