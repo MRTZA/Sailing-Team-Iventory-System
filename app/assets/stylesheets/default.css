@@ -47,6 +47,7 @@ table#inventory {
   border-collapse: collapse;
   width: 100%;
   border-radius: 5px;
+  -moz-border-radius: 5px;
   border-bottom: 2px solid slategray;
   border-right: 2px solid slategray;
   border-left: 2px solid slategray;
