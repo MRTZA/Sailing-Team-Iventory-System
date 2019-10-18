@@ -11,8 +11,7 @@ class ItemController < ApplicationController
   end
 
   def index
-    @sort = params[:sort] || session[:sort]
-    
+    @item = Item.all
   end
 
   def new
@@ -38,10 +37,9 @@ class ItemController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    @item.destroy
-    flash[:notice] = "Movie '#{@item.title}' deleted."
+    @Item.destroy
+    flash[:notice] = "Item '#{@item.title}' deleted."
     redirect_to item_path
   end
 
 end
-
