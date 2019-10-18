@@ -33,18 +33,18 @@ h1.title {
   font-size: 2em;
   font-style: normal;
 }
-table#movies {
+table#items {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#movies th {
+table#items th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#movies th, table#movies td {
+table#items th, table#items td {
   padding: 4px;
   text-align: left;
 }
@@ -60,7 +60,7 @@ form label {
   color: maroon;
 }
 /*Highlights columns that are sorted*/
-table#movies th.hilite {
+table#items th.hilite {
   background-color: yellow;
 }
 
