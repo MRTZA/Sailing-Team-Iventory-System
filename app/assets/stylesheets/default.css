@@ -7,6 +7,9 @@ html, body {
   font-size: 10pt;
   width: 100%;
 }
+container {
+  width: 100%;
+}
 div#main {
   margin: 0;
   padding: 0 20px 20px;
