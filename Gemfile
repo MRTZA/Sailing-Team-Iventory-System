@@ -60,4 +60,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-
+gem 'rails-erd', group: :development

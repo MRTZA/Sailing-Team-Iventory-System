@@ -67,7 +67,16 @@ Give an example
 
 ## Deployment
 
-will write heroku deployment steps tomorrow
+```
+$ ssh-keygen -t rsa
+$ heroku login
+$ heroku keys:add
+$ heroku create
+$ git push heroku master
+$ heroku run rake db:migrate
+$ heroku run rake db:seed
+$ heroku open
+```
 
 ## Built With
 
