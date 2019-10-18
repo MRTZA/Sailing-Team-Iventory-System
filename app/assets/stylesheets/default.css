@@ -52,7 +52,6 @@ table#inventory {
   font-family: 'Open Sans';
 }
 table#inventory th {
-  border-radius: 5px;
   border: 2px solid #500000;
   font-weight: bold;
   background-color: slategray;
@@ -61,6 +60,9 @@ table#inventory th {
 table#inventory th, table#inventory td {
   padding: 4px;
   text-align: left;
+}
+table#inventory tr {
+  border-right: 2px solid;
 }
 #notice #warning {
   background: rosybrown;
