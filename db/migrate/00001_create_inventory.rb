@@ -1,6 +1,6 @@
 class CreateInventory < ActiveRecord::Migration
   def change
-    create_table :item do |t|
+    create_table :items do |t|
       t.string :title
       t.text :description
       t.integer :checked_out
