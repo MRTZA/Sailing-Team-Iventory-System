@@ -1,0 +1,19 @@
+-#  This file is app/views/item/index.html.haml
+%h1 All Inventory items
+
+%table#inventory
+  %thead
+    %tr
+      %th Item Name    
+      %th Description
+      %th Checked Out
+      %th Total Quantity
+      %th Remaining
+  %tbody
+    - @item.each do |item|
+      %tr
+        %td= item.title
+        %td= item.description
+        %td= item.checked_out
+        %td= item.quantity
+        %td= (item.quantity - item.checked_out)
