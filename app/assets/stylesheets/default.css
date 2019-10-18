@@ -7,6 +7,9 @@ html, body {
   font-size: 10pt;
   width: 100%;
 }
+.bg-primary {
+  background-color: Darkslategray;
+}
 container {
   width: 100%;
 }
@@ -43,6 +46,7 @@ table#inventory {
   width: 100%;
   border-bottom: 2px solid slategray;
   border-right: 2px solid slategray;
+  border-left: 2px solid slategray;
   font-family: 'Open Sans';
 }
 table#inventory th {
