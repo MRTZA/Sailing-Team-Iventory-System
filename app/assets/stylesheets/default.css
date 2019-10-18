@@ -63,6 +63,7 @@ table#inventory th, table#inventory td {
 }
 table#inventory td {
   border-bottom: 2px solid;
+  border-right: 2px solid;
   padding-left: 7px;
 }
 #notice #warning {
