@@ -1,13 +1,6 @@
 -#  This file is app/views/item/index.html.haml
 %h1 All Inventory items
 
-= form_tag item_path, :id => "options_form", :method => :get do
-  Include:
-  - @all_options.each do |option, checked|
-    = option
-    = check_box_tag "options[#{option}]", nil, checked
-  = submit_tag 'Refresh', :id => "options_submit"
-
 %table#inventory
   %thead
     %tr
