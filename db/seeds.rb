@@ -18,6 +18,15 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
   	 ]
 
+inventory = [{:item => 'Hulls', :description => 'none', :quantity => 1},
+					{:item => 'LifeJackets', :description => 'none', :quantity => 40},
+					{:item => 'Oars', :description => 'none', :quantity => 6},
+     ]
+
 movies.each do |movie|
   Movie.create!(movie)
+end
+
+inventory.each do |item|
+	Item.create!(item)
 end
