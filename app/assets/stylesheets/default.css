@@ -53,7 +53,7 @@ table#inventory {
   font-family: 'Open Sans';
 }
 table#inventory th {
-  border: 2px solid maroon;
+  border: 2px solid #50000;
   border-radius: 5px;
   font-weight: bold;
   background-color: slategray;
@@ -72,11 +72,11 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: #50000;
 }
 /*Highlights columns that are sorted*/
 table#inventory th.hilite {
-  background-color: maroon;
+  background-color: #50000;
   color: white;
 }
 
