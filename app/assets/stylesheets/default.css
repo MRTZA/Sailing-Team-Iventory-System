@@ -5,6 +5,13 @@ html, body {
   color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
+  width: 100%;
+}
+.bg-primary {
+  background-color: maroon!important;
+}
+container {
+  width: 100%;
 }
 div#main {
   margin: 0;
@@ -22,31 +29,42 @@ h1 {
   font-style: italic;
   display: block;
   width: 100%;
+  border-radius: 5px;
   border-bottom: 1px solid DarkSlateGrey;
 }
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: orange;
+  background-color: maroon;
   color: white;
-  border-bottom: 4px solid gold;
+  border-radius: 5px;
+  border-bottom: 4px solid slategray;
   font-size: 2em;
   font-style: normal;
 }
-table#movies {
+table#inventory {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid slategray;
+  border-right: 2px solid slategray;
+  border-left: 2px solid slategray;
+  font-family: 'Open Sans';
 }
-table#movies th {
-  border: 2px solid white;
+table#inventory th {
+  border: 2px solid #500000;
   font-weight: bold;
-  background-color: wheat;
+  background-color: slategray;
+  color: white;
 }
-table#movies th, table#movies td {
+table#inventory th, table#inventory td {
   padding: 4px;
   text-align: left;
+}
+table#inventory td {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  padding-left: 7px;
 }
 #notice #warning {
   background: rosybrown;
@@ -57,10 +75,15 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: #500000;
 }
 /*Highlights columns that are sorted*/
-table#movies th.hilite {
-  background-color: yellow;
+table#inventory th.hilite {
+  background-color: #500000;
+  color: white;
 }
 
+@media (min-width: 720px)
+{
+  max-width: unset;
+}

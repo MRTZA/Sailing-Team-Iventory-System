@@ -1,0 +1,17 @@
+%h2 Create New Item
+
+= form_tag item_path do
+
+  = label :item, :title, 'Title'
+    = text_field :item, 'title'
+
+    = label :item, :description, 'Decription'
+    = text_field :item, 'description'
+
+    = label :item :checked_out, 'Checked Out;
+    = text_field :item, 'checked_out'
+
+    = label :item :quantity, 'Total Quantity'
+    = text_field :item, 'quantity'
+
+    = submit_tag 'Save Changes', :class => 'btn btn-primary'
