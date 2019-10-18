@@ -12,3 +12,4 @@ class CreateInventory < ActiveRecord::Migration
     end
   end
 end
+
