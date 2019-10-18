@@ -1,0 +1,31 @@
+-#  This file is app/views/item/index.html.haml
+%h1 All Inventory items
+
+= form_tag item_path, :id => "options_form", :method => :get do
+  Include:
+  - @all_options.each do |option, checked|
+    = option
+    = check_box_tag "options[#{option}]", nil, checked
+  = submit_tag 'Refresh', :id => "options_submit"
+
+%table#inventory
+  %thead
+    %tr
+      %th{:class => ("hilite" if @sort == 'title')}
+        =link_to "Item Name", item_path(:sort => :title), :id => "title_header"
+      %th Description
+      %th Checked Out
+      %th{:class => ("hilite" if @sort == 'quantity')}
+        =link_to "Total Quantity", item_path(:sort => :quantity), :id => "quantity_header"
+      %th Remaining
+  %tbody
+    - @item.each do |item|
+      %tr
+        %td= item.title
+        %td= item.description
+        %td= item.checked_out
+        %td= item.quantity
+        %td= (item.quantity - item.checked_out)
+
+= link_to 'Add new item', new_item_path
+
