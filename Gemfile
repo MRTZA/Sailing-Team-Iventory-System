@@ -53,7 +53,6 @@ group :development, :test do
   gem 'spring'
 
   # For rake:db
-  gem 'therubyracer'
   gem 'tzinfo-data'
 end
 
