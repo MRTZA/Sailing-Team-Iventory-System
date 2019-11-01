@@ -4,11 +4,16 @@
 %table#inventory
   %thead
     %tr
-      %th Item Name
+      %th{:class => ("hilite" if @sort == 'title')}
+        = link_to "Item Name", :sort => "title"
       %th Description
-      %th Checked Out
-      %th Total Quantity
-      %th Remaining
+      %th{:class => ("hilite" if @sort == 'checked_out')}
+        = link_to  "Checked Out", :sort => "checked_out"
+      %th{:class => ("hilite" if @sort == 'quantity')}
+        = link_to "Total Quantity", :sort => "quantity"
+      %th{:class => ("hilite" if @sort == 'remaining')}
+        = link_to "Remaining", :sort => "remaining"
+      %th More Details
   %tbody
     - @item.each do |item|
       %tr
@@ -17,3 +22,5 @@
         %td= item.checked_out
         %td= item.quantity
         %td= (item.quantity - item.checked_out)
+        %td= link_to "Details about #{item.title}", item_path(item)
+    %button= button_to 'Add', {:controller => 'item', :action => 'new'}, {:method => 'get'}

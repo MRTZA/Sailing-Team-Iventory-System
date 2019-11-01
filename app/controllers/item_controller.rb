@@ -11,20 +11,19 @@ class ItemController < ApplicationController
   end
 
   def index
-    @item = Item.all
+    @item = Item.order(params[:sort])
     @sort = params[:sort] || session[:sort]
-    session[:sort] = @sort
-    @item = Item.all.order @sort
+
   end
 
   def new
-    # default: render 'new' template
+
   end
 
   def create
     @item = Item.create!(item_params)
     flash[:notice] = "#{@item.title} was successfully created."
-    redirect_to item_path
+    redirect_to new_item_path
   end
 
   def edit
