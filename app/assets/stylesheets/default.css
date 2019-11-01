@@ -19,7 +19,7 @@ div#main {
 }
 a {
   background: transparent;
-  color: white;
+  color: #500000;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -66,8 +66,8 @@ table#inventory td {
   border-right: 2px solid;
   padding-left: 7px;
 }
-td a {
-  color: #500000;
+th a {
+  color: white;
 }
 #notice #warning {
   background: rosybrown;
