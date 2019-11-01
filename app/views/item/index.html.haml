@@ -23,3 +23,4 @@
         %td= item.quantity
         %td= (item.quantity - item.checked_out)
         %td= link_to "Details about #{item.title}", item_path(item)
+    %button= button_to 'Add', {:controller => 'item', :action => 'new'}, {:method => 'get'}
