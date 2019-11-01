@@ -9,6 +9,7 @@
       %th Checked Out
       %th Total Quantity
       %th Remaining
+      %th More Details
   %tbody
     - @item.each do |item|
       %tr
@@ -17,4 +18,4 @@
         %td= item.checked_out
         %td= item.quantity
         %td= (item.quantity - item.checked_out)
-        %td= link_to "More about #{item.title}", item_path(item)
+        %td= link_to "Details about #{item.title}", item_path(item)
