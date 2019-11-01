@@ -7,5 +7,6 @@ module ItemHelper
   def self.all_options
     ['All Turned In', 'All Checked Out', 'Any Checked Out']
   end
+
 end
 
