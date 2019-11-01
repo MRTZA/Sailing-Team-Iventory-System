@@ -79,7 +79,7 @@ form label {
 }
 /*Highlights columns that are sorted*/
 table#inventory th.hilite {
-  background-color: white;
+  background-color: #fce300;
 }
 
 th.hilite a {
