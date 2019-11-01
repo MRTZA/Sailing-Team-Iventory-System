@@ -19,7 +19,7 @@ div#main {
 }
 a {
   background: transparent;
-  color: maroon;
+  color: #500000;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -66,6 +66,9 @@ table#inventory td {
   border-right: 2px solid;
   padding-left: 7px;
 }
+th a {
+  color: white;
+}
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;
@@ -79,8 +82,11 @@ form label {
 }
 /*Highlights columns that are sorted*/
 table#inventory th.hilite {
-  background-color: #500000;
-  color: white;
+  background-color: #fce300;
+}
+
+th.hilite a {
+  color: #500000;
 }
 
 @media (min-width: 720px)
