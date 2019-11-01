@@ -83,6 +83,10 @@ table#inventory th.hilite {
   color: white;
 }
 
+th.hilite a {
+  color: white;
+}
+
 @media (min-width: 720px)
 {
   max-width: unset;
