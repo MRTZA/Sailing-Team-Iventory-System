@@ -4,12 +4,11 @@
 %table#inventory
   %thead
     %tr
-      %th{:class => ("hilite" if @sort == 'title')}
-        =link_to "Item Name", item_path(:sort => :title)
+      %th= sortable "Item Name"
       %th Description
-      %th Checked Out
-      %th Total Quantity
-      %th Remaining
+      %th= sortable  "Checked Out"
+      %th= sortable "Total Quantity"
+      %th= sortable "Remaining"
       %th More Details
   %tbody
     - @item.each do |item|

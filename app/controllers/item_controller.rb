@@ -11,8 +11,7 @@ class ItemController < ApplicationController
   end
 
   def index
-    @sort = params[:sort]
-    @item = Item.all.order(@sort)
+    @item = Item.order(sort_column + " " + sort_direction)
   end
 
   def new
@@ -41,6 +40,14 @@ class ItemController < ApplicationController
     @Item.destroy
     flash[:notice] = "Item '#{@item.title}' deleted."
     redirect_to item_path
+  end
+
+  def sort_column
+    Item.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
 end
