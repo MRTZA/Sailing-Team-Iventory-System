@@ -19,7 +19,7 @@ div#main {
 }
 a {
   background: transparent;
-  color: maroon;
+  color: white;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -79,12 +79,11 @@ form label {
 }
 /*Highlights columns that are sorted*/
 table#inventory th.hilite {
-  background-color: #500000;
-  color: white;
+  background-color: white;
 }
 
 th.hilite a {
-  color: white;
+  color: #500000;
 }
 
 @media (min-width: 720px)
