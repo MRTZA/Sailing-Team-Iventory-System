@@ -12,5 +12,7 @@ module ItemHelper
     css_class = column == sort_column ? "current #{sort_direction}" : nil
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
     link_to title, {:dort => column, :direction => direction}, {:class => css_class}
+  end
+  
 end
 
