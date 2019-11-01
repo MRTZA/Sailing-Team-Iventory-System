@@ -12,6 +12,8 @@ class ItemController < ApplicationController
 
   def index
     @item = Item.order(params[:sort])
+    @sort = params[:sort] || session[:sort]
+
   end
 
   def new
