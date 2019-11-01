@@ -4,8 +4,7 @@
 %table#inventory
   %thead
     %tr
-      %th{:class => ("hilite" if @sort == 'title')}
-        =link_to "Item Name", item_path(:sort => :title), :id => "title_header"
+      %th Item Name
       %th Description
       %th Checked Out
       %th Total Quantity
@@ -18,3 +17,4 @@
         %td= item.checked_out
         %td= item.quantity
         %td= (item.quantity - item.checked_out)
+        %td= link_to "More about #{item.title}", item_path(item)
