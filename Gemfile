@@ -64,6 +64,7 @@ group :development, :test do
   
   
   # For rake:db
+  gem "therubyracer"
   gem 'tzinfo-data'
 end
 

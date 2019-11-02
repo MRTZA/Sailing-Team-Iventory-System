@@ -47,7 +47,10 @@ Go to [localhost](http://localhost:3000) to see the site
 
 Explain how to run the automated tests for this system
 
-`something... something... rspec...`
+```
+rake db:migrate RAILS_ENV=test
+rspec
+```
 
 ### Break down into end to end tests
 
