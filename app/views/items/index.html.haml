@@ -1,6 +1,10 @@
 %h1 All Inventory Items
 
-%button= button_to 'Create New Item', {:controller => 'items', :action => 'new'}, {:method => 'get'}
+- if can? :create, @user
+  %button= button_to 'Manage Users', {:controller => 'users', :action => 'index'}, {:method => 'get'}
+
+- if can? :create, @item
+  %button= button_to 'Create New Item', {:controller => 'items', :action => 'new'}, {:method => 'get'}
 
 %table#items
   %thead
@@ -12,9 +16,34 @@
       %th Condition
   %tbody
     - @items.each do |item|
-      %tr
-        %td= link_to "#{item.title}", item_path(item)
-        %td= item.checked_out
-        %td= item.user
-        %td= item.date
-        %td= item.condition
+      - if current_user.nil?
+        %tr
+          %td= ""
+          %td= ""
+          %td= ""
+          %td= ""
+          %td= ""
+      - elsif current_user.permission == 0
+        - if item.user == current_user.username or item.checked_out == 0
+          %tr
+            %td= link_to "#{item.title}", item_path(item)
+            %td= item.checked_out
+            %td= item.user
+            %td= item.date
+            %td= item.condition
+            - if item.checked_out == 0
+              %td= button_to 'Check Out', items_update_path(item.id)
+            - else
+              %td= button_to 'Check In', items_update_path(item.id)
+      - else
+        %tr
+          %td= link_to "#{item.title}", item_path(item)
+          %td= item.checked_out
+          %td= item.user
+          %td= item.date
+          %td= item.condition
+          - if item.checked_out == 0
+            %td= button_to 'Check Out', items_update_path(item.id)
+          - else
+            %td= button_to 'Check In', items_update_path(item.id)
+

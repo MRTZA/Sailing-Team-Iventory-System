@@ -12,6 +12,11 @@ class Ability
       can :update, User do |user|
         user.try(:username) == user.username
       end
+
+      can :read, Item
+      can :update, Item do |item|
+        item.try(:user) == user.username or item.try(:checked_out) == 0
+      end
     end
 
     # Define abilities for the passed in user here. For example:
