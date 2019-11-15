@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  checkout_out: MyString
+  user: MyString
+  date: MyString
+  condition: MyString
+
+two:
+  title: MyString
+  checkout_out: MyString
+  user: MyString
+  date: MyString
+  condition: MyString

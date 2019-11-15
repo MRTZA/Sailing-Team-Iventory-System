@@ -1,0 +1,20 @@
+%h1 All Inventory Items
+
+%button= button_to 'Create New Item', {:controller => 'items', :action => 'new'}, {:method => 'get'}
+
+%table#items
+  %thead
+    %tr
+      %th Title
+      %th Checked Out
+      %th User
+      %th DateTime
+      %th Condition
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= link_to "#{item.title}", item_path(item)
+        %td= item.checked_out
+        %td= item.user
+        %td= item.date
+        %td= item.condition

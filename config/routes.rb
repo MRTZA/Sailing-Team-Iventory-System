@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :items
+  get 'items/index'
+  get 'items/show'
+  get 'items/new'
+  get 'items/edit'
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
 
@@ -16,5 +22,5 @@ Rails.application.routes.draw do
   post "/insert" => "users#insert", as: "insert"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "users#index"
+  root to: "items#index"
 end

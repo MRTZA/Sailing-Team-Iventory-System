@@ -7,3 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!([{:email => 'admin@example.com', :password => "123", :username => "admin", :permission => 1}])
+
+items = [{:title => 'oar', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'oar', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'oar', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'oar', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'life jacket', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'life jacket', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'life jacket', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'life jacket', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'life jacket', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'life jacket', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'hull', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'hull', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'sail', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'sail', :checked_out => 0, :user => '', :condition => 'good'},
+         {:title => 'sail', :checked_out => 0, :user => '', :condition => 'good'},
+        ]
+
+items.each do |item|
+  Item.create!(item)
+end

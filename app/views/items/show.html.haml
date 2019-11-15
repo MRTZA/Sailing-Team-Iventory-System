@@ -1,0 +1,24 @@
+%h3 Details about #{@items.title}
+
+%ul#details
+  %li
+    Title:
+    = @items.title
+  %li
+    Checked Out:
+    = @items.checked_out
+  %li
+    User:
+    = @items.user
+  %li
+    Date:
+    = @items.date
+  %li
+    Condition:
+    = @items.condition
+
+= link_to 'Edit', edit_item_path(@items)
+
+= button_to 'Delete', item_path(@items), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-primary'
+
+= link_to 'Back to item list', items_path
