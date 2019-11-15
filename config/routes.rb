@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'items/show'
   get 'items/new'
   get 'items/edit'
+  post '/items/:id', to: 'items#check_out', as: "items_update"
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]

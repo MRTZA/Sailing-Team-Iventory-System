@@ -37,3 +37,5 @@
             = user.email
           %td
             = user.permission
+
+%button= button_to 'Back to Inventory', {:controller => 'items', :action => 'index'}, {:method => 'get'}
