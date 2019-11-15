@@ -1,0 +1,15 @@
+-# edit.html.haml using partial
+%h2 Edit Existing User
+
+= form_tag user_path(@user), :method => :put do
+
+  = label :user, :username, 'Username'
+  = text_field :user, 'username'
+
+  = label :user, :email, 'Email'
+  = text_field :user, 'email'
+
+  = label :user, :permission, 'Permission'
+  = number_field :user, 'permission'
+
+  = submit_tag 'Update User Info', :class => 'btn btn-primary'

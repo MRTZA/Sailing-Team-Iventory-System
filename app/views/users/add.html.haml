@@ -1,0 +1,17 @@
+%h2 Add New User
+
+= form_tag insert_path do
+
+  = label :user, :username, 'Username'
+  = text_field :user, 'username'
+
+  = label :user, :email, 'Email'
+  = text_field :user, 'email'
+
+  = label :user, :password, 'Password'
+  = password_field :user, 'password'
+
+  = label :user, :permission, 'Permission'
+  = number_field :user, 'permission'
+
+  = submit_tag 'Add User', :class => 'submit-field'

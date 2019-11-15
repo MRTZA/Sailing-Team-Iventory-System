@@ -37,6 +37,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'tzinfo-data'
 
+gem 'haml-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
