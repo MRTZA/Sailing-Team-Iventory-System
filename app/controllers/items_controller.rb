@@ -52,7 +52,7 @@ class ItemsController < ApplicationController
     if @item.checked_out == 0
       @item.update_attributes!({:user => current_user.username, :checked_out => 1, :date => DateTime.now})
     else
-      @item.update_attributes!({:user => current_user.username, :checked_out => 0, :date => DateTime.now})
+      @item.update_attributes!({:user => '', :checked_out => 0, :date => ''})
     end
     redirect_to items_path
   end
