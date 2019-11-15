@@ -39,6 +39,8 @@ gem 'tzinfo-data'
 
 gem 'haml-rails'
 
+gem 'cancan'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

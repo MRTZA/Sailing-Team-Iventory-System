@@ -9,7 +9,8 @@
   = label :user, :email, 'Email'
   = text_field :user, 'email'
 
-  = label :user, :permission, 'Permission'
-  = number_field :user, 'permission'
+  - if current_user.permission == 1
+    = label :user, :permission, 'Permission'
+    = number_field :user, 'permission'
 
   = submit_tag 'Update User Info', :class => 'btn btn-primary'

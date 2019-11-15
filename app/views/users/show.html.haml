@@ -12,6 +12,11 @@
     Permission:
     = @user.permission
 
-= link_to 'Edit', edit_user_path(@user)
-= button_to 'Delete', user_path(@user), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-primary'
-= link_to 'Back to user list', users_path
+- if can? :update, @user
+  = link_to 'Edit', edit_user_path(@user)
+
+- if can? :delete, @user
+  = button_to 'Delete', user_path(@user), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-primary'
+
+- if can? :read, @user
+  = link_to 'Back to user list', users_path

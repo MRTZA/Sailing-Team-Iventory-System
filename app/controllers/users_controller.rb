@@ -12,10 +12,12 @@ class UsersController < Clearance::UsersController
   def show
     id = params[:id]
     @user = User.find(id)
+    unauthorized! if cannot? :read, @user
   end
 
   def edit
     @user = User.find params[:id]
+    unauthorized! if cannot? :update, @user
   end
 
   def update
@@ -23,6 +25,7 @@ class UsersController < Clearance::UsersController
     @user.update_attributes!(user_params)
     flash[:notice] = "#{@user.username} was successfully updated."
     redirect_to user_path(@user)
+    unauthorized! if cannot? :update, @user
   end
 
   def destroy
@@ -30,15 +33,17 @@ class UsersController < Clearance::UsersController
     @user.destroy
     flash[:notice] = "User '#{@user.username}' deleted."
     redirect_to users_path
+    unauthorized! if cannot? :delete, @user
   end
 
   def add
-
+    authorize! :update, @user
   end
 
   def insert
     @user = User.create!(user_params)
     flash[:notice] = "#{@user.username} was successfully created."
     redirect_to users_path
+    unauthorized! if cannot? :create, @user
   end
 end
