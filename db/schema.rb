@@ -18,19 +18,19 @@ ActiveRecord::Schema.define(version: 20191115103202) do
     t.string   "user"
     t.datetime "date"
     t.string   "condition"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.string   "email",                          null: false
-    t.string   "encrypted_password", limit: 128, null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+    t.string   "email",                                      null: false
+    t.string   "encrypted_password", limit: 128,             null: false
     t.string   "confirmation_token", limit: 128
-    t.string   "remember_token",     limit: 128, null: false
+    t.string   "remember_token",     limit: 128,             null: false
     t.string   "username"
-    t.integer  "permission"
+    t.integer  "permission",                     default: 0
     t.index ["email"], name: "index_users_on_email"
     t.index ["permission"], name: "index_users_on_permission"
     t.index ["remember_token"], name: "index_users_on_remember_token"
