@@ -55,12 +55,13 @@ Then(/^I should be able to make a new user account$/) do
   find_field("Username").set("Testman")
   find_field("Password").set("password")
   click_on "Sign up"
+  expect(page).to have_content("All Inventory Items")
 end
 
 Then(/^I should be able to sign in with the account$/) do
   visit "/"
-  find_field("Email").set("newuser@goodemail.net")
+  find_field("Email").set("olduser@goodemail.net")
   find_field("Password").set("password")
-  click_on "Sign in"
+  click_button "Sign in"
   expect(page).to have_content("All Inventory Items")
 end
