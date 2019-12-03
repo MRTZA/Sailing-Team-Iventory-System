@@ -6,6 +6,25 @@
 - if can? :create, @item
   %button= button_to 'Create New Item', {:controller => 'items', :action => 'new'}, {:method => 'get'}
 
+- if can? :create, @user
+  %table#items_condensed
+    %thead
+      %tr
+        %th Title
+        %th Total
+        %th Checked Out
+    %tbody
+      -item_titles = Array.new
+      -@items.each do |item|
+        -item_titles.push(item.title)
+      -item_titles.uniq.each do |title|
+        %tr
+          %td #{title}
+          %td
+            = sum_item(@items,title).count
+          %td
+            = checked_out_count(@items, title)
+
 %table#items
   %thead
     %tr
