@@ -54,6 +54,10 @@ class ItemsController < ApplicationController
     else
       @item.update_attributes!({:user => current_user.username, :checked_out => 0, :date => DateTime.now})
     end
+
+    @user = current_user
+    ModelMailer.checkout_notification(@item, @user).deliver
+
     redirect_to items_path
   end
 end
